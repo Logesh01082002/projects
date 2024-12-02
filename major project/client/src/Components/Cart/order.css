@@ -1,0 +1,116 @@
+.order-container{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card{
+    display: flex;
+    /* border: 1px solid gray; */
+    /* box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2); */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 5px;
+    gap: 10px;
+    margin: 10px;
+    width: 600px;
+}
+
+.card-img > img {
+    width: 150px;
+}
+
+.card-title{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-content{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+
+.price-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+    width: 400px;
+    height: 250px;
+    justify-content: center;
+}
+
+.price-card-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid lightgray;
+}
+
+.price-card-body{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.price-rows{
+    display: flex;
+    /* width: 600px; */
+    /* gap: 50px; */
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.price-rows >span{
+    width: 250px;
+    align-self: center;
+    justify-content: center;
+}
+
+.price-card-footer{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.qty-action{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.qty-input{
+    width: 50px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
