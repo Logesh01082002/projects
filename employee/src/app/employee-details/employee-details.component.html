@@ -1,0 +1,15 @@
+<h3>EmpLoyee Details :</h3><br>
+
+<div class="card">
+ <div class="card-body"> <h5 class="card-title">{{employee.eid}} - {{employee.firstName}} {{employee.lastName}}</h5> 
+<p class="card-text"><b>Email:</b> {{employee.email}}</p> 
+<p class="card-text"><b>Designation:</b> {{employee.designation}}</p>
+<p class="card-text"><b>Salary:</b> {{employee.salary}}</p>
+
+ <p class="card-text"><b>Department:</b> {{employee.department.deptName}}</p> 
+ <p class="card-text"><b>phone-Number:</b> {{employee.phoneNumber}}</p>
+ <p class="card-text"><b>Address:</b> {{employee.address}}</p>
+</div> </div>
+<br>
+
+<button  (click)="goToEmployeeList()" class="btn btn-success">Back</button>

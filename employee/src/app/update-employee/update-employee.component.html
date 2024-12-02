@@ -1,0 +1,76 @@
+<div class="col-md-6 offset-md-3 custom-form" >
+    <br>
+    
+    <h3 class="text-center" style="font-family:Arial, Helvetica, sans-serif">
+        <strong>Update Employee:</strong></h3>
+    
+    <form (ngSubmit)="updateEmployee()" #employeeForm="ngForm">
+        
+    <div class="form-group">
+    <label><span class="req">*</span>First Name:</label>
+    <input type="text" #firstname="ngModel" class="form-control" id="firstName"
+     [(ngModel)]="employee.firstName" name="firstName" required>
+    
+     <span class="text-danger" *ngIf="firstname.valid==false && firstname.touched ">
+        FirstName is Required!</span>
+    </div>
+    
+    <div class="form-group">
+        <label><span class="req">*</span>Last Name:</label>
+        <input type="text" #lastname="ngModel" class="form-control" id="lastName"
+         [(ngModel)]="employee.lastName" name="lastName" required>
+    
+         
+     <span class="text-danger" *ngIf="!lastname.valid && lastname.touched">
+        LastName is Required!</span>
+    
+        </div>
+    
+    
+        <div class="form-group">
+            <label><span class="req">*</span>Email:</label>
+            <input type="text" #email="ngModel" class="form-control" id="email"
+             [(ngModel)]="employee.email" name="email" required>
+    
+             <span class="text-danger" *ngIf="!email.valid && email.touched ">
+               valid Email is Required!</span>
+            </div>
+    
+            <div class="form-group">
+            <label><span class="req">*</span>Salary :</label>
+            <input type="text" #salary="ngModel" class="form-control" id="salary"
+                [(ngModel)]="employee.salary" name="salary" required>
+                <span class="text-danger" *ngIf="!salary.valid && salary.touched ">
+                    Salary is Required!</span>
+            </div>
+            <div class="form-group">
+                <label><span class="req">*</span>Designation:</label>
+                <input type="text" #designation="ngModel" class="form-control" id="designation"
+                 [(ngModel)]="employee.designation" name="designation" required>
+                 <span class="text-danger" *ngIf="!designation.valid && designation.touched ">
+                   pls Enter the Designation </span>
+                </div>
+    
+            <div class="form-group">
+                <label><span class="req">*</span>PhoneNumber:</label>
+                <input type="tel" #phonenumber="ngModel" class="form-control" id="PhoneNumber"
+                    [(ngModel)]="employee.phoneNumber" name="PhoneNumber" required>
+                    <span class="text-danger" *ngIf="!phonenumber.valid && phonenumber.touched ">
+                        phonenumber is Required!</span>
+                </div>
+    
+            <div class="form-group">
+                <label for="address"><span class="req">*</span>Address:</label>
+                <textarea class="form-control" #address="ngModel" id="address" rows="3"
+                [(ngModel)]="employee.address" name="address" required></textarea>
+                <span class="text-danger" *ngIf="!address.valid && address.touched ">
+                    Address is Required!</span>
+            </div>          
+    <br>
+      <div class="text-center">
+    <button class="btn btn-primary" type="submit" [disabled]="!employeeForm.valid">submit</button>
+    </div>
+    </form>
+    
+    </div>
+    

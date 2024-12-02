@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+    
+    <h3 class="text-center">Create Department:</h3><br>
+    
+    <form (ngSubmit)="onSubmit()" #departmentform="ngForm">
+    <div class="form-group">
+    <label><strong><span>*</span>Department Name:</strong></label>
+    <input type="text" class="form-control" id="deptName"
+     [(ngModel)]="department.deptName" name="deptName" required>
+    </div>
+
+    <div class="form-group">
+        <label><strong><span>*</span>Manager:</strong></label>
+        <input type="text" class="form-control"  id="manager"
+         [(ngModel)]="department.manager" name="manager" required>
+    </div>
+
+    <div class="form-group">
+        <label><strong><span>*</span>Description:</strong></label>
+        <input type="text" class="form-control" id="description"
+            [(ngModel)]="department.description" name="description" required>
+        </div>
+
+
+    
+  
+    <br>
+    <button class="btn btn-success" type="submit" [disabled]="!departmentform.valid">Create</button>
+    
+    </form>
+    
+    </div>
+    
